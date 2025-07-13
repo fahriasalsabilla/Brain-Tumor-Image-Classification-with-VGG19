@@ -1,5 +1,4 @@
 # Brain-Tumor-Image-Classification-with-VGG19
-# Brain Tumor Image Classification with VGG19
 
 ## Overview
 This project focuses on developing a robust deep learning model for the classification of brain tumor images. Utilizing transfer learning with a pre-trained VGG19 model, this solution aims to assist in the early and accurate detection of brain tumors from MRI scans, potentially aiding medical diagnosis.
