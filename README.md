@@ -11,8 +11,12 @@ This project focuses on developing a robust deep learning model for the classifi
 * **Model Visualization:** Provides insights into model training history (loss, accuracy curves) and predictions.
 
 ## Dataset
-* **Source:** [Sebutkan Sumber Dataset Anda, Contoh: Kaggle, atau nama folder jika Anda membuatnya sendiri].
-* **Classes:** [Sebutkan Jumlah dan Nama Kelas, Contoh: 4 classes: Meningioma, Glioma, Pituitary Tumor, and No Tumor].
+* **Source:** [Kaggle](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset).
+* **Classes:** This dataset contains 7022 images of human brain MRI images which are classified into 4 classes:
+               - glioma
+               - meningioma
+               - no tumor
+               - pituitary
 * **Image Count:** [Sebutkan Jumlah Total Gambar, Contoh: Approximately X images (e.g., 7000 images)].
 * **Distribution:** [Sebutkan Distribusi Gambar per Kelas, Contoh: Fairly balanced distribution across classes].
 * **Preprocessing:** Images are resized to [Sebutkan Ukuran Resizing, Contoh: 224x224 pixels] and normalized.
