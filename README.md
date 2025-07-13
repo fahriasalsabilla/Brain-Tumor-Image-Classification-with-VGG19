@@ -17,10 +17,8 @@ This project focuses on developing a robust deep learning model for the classifi
     * Meningioma
     * No tumor
     * Pituitary
-* **Image Count:** [Sebutkan Jumlah Total Gambar, Contoh: Approximately X images (e.g., 7000 images)].
-* **Distribution:** [Sebutkan Distribusi Gambar per Kelas, Contoh: Fairly balanced distribution across classes].
-* **Preprocessing:** Images are resized to [Sebutkan Ukuran Resizing, Contoh: 224x224 pixels] and normalized.
-* **Split:** The dataset is split into training, validation, and test sets ([Sebutkan Persentase Split, Contoh: e.g., 80% training, 10% validation, 10% test]).
+* **Preprocessing:** Images are resized to 224x224 pixels
+* **Split:** The dataset is split into training and test sets (90% training 10% test]).
 
 ## Model Architecture
 * **Base Model:** VGG19, pre-trained on ImageNet.
@@ -28,24 +26,25 @@ This project focuses on developing a robust deep learning model for the classifi
     * Flatten layer to convert the output of the convolutional base into a 1D feature vector.
     * Dense layers with ReLU activation for feature learning.
     * Dropout layers for regularization to prevent overfitting.
-    * Output layer with [Sebutkan Aktivasi Output, Contoh: Softmax activation] for multi-class classification.
-* **Optimizer:** [Sebutkan Optimizer yang Digunakan, Contoh: Adam optimizer].
-* **Loss Function:** [Sebutkan Loss Function, Contoh: Categorical Cross-Entropy].
+    * Output layer with Softmax activation for multi-class classification.
+* **Optimizer:** Adam optimizer.
+* **Loss Function:** Categorical Cross-Entropy.
 
 ## Performance
 The model achieved the following performance metrics on the test set:
-* **Accuracy:** [Sebutkan Akurasi, Contoh: 98.5%]
-* **Precision:** [Sebutkan Presisi (bisa rata-rata atau per kelas), Contoh: 0.98]
-* **Recall:** [Sebutkan Recall (bisa rata-rata atau per kelas), Contoh: 0.97]
-* **F1-Score:** [Sebutkan F1-Score (bisa rata-rata atau per kelas), Contoh: 0.97]
+* **Accuracy:** 99.2%
+* **F1-Score:** 99.2%
+  
+| Class       | Precision | Recall | F1-Score | Support |
+|-------------|-----------|--------|----------|---------|
+| glioma      | 1.00      | 0.98   | 0.99     | 163     |
+| meningioma  | 0.97      | 1.00   | 0.98     | 164     |
+| notumor     | 1.00      | 1.00   | 1.00     | 198     |
+| pituitary   | 1.00      | 0.99   | 1.00     | 175     |
+| **Accuracy**    |               |       | 0.99     | 700     |
+| **Macro avg**   | 0.99          | 0.99  | 0.99     | 700     |
+| **Weighted avg**| 0.99          | 0.99  | 0.99     | 700     |
 
-[Opsional: Sertakan Confusion Matrix atau Classification Report dalam format teks atau link ke gambar jika Anda menyediakannya.]
-
-## Getting Started
-
-### Prerequisites
-* Python 3.x
-* Jupyter Notebook (recommended)
 
 ### Installation
 1.  Clone the repository:
@@ -53,16 +52,3 @@ The model achieved the following performance metrics on the test set:
     git clone [https://github.com/fahriasalsabilla/Brain-Tumor-Image-Classification-with-VGG19.git](https://github.com/fahriasalsabilla/Brain-Tumor-Image-Classification-with-VGG19.git)
     cd Brain-Tumor-Image-Classification-with-VGG19
     ```
-2.  Install the required dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-    (Pastikan Anda memiliki file `requirements.txt` yang berisi daftar semua library Python yang digunakan, contoh: `tensorflow`, `keras`, `numpy`, `pandas`, `matplotlib`, `scikit-learn`, `opencv-python`)
-
-### Usage
-1.  Download the dataset from [Sebutkan Sumber Dataset Anda dan Link Download jika ada].
-2.  Place the dataset in the appropriate directory (e.g., `data/`).
-3.  Open and run the Jupyter Notebook: `brain_tumor_classification.ipynb` (Sesuaikan nama file `.ipynb` Anda).
-4.  Follow the steps in the notebook to preprocess data, build, train, and evaluate the model.
-
-## File Structure
